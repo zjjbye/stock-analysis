@@ -38,6 +38,7 @@ def generate_and_write_data(p, topic):
             logger.info('Wrote 1000000 records to Kafka in %s' % (end - start))
             start = end
             num_of_msg = 0
+        time.sleep(1)
 
 
 def shutdown_hook(p):

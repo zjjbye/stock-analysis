@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="107cab34-9be0-4314-a894-f46a4b448408" name="Default" comment="" />
+    <list default="true" id="107cab34-9be0-4314-a894-f46a4b448408" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kafka/README.md" afterPath="$PROJECT_DIR$/kafka/README.md" />
+    </list>
     <ignored path="stock-analysis.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -24,8 +26,8 @@
         <entry file="file://$PROJECT_DIR$/kafka/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="680">
-                <caret line="34" column="43" selection-start-line="34" selection-start-column="43" selection-end-line="34" selection-end-column="43" />
+              <first_editor relative-caret-position="280">
+                <caret line="14" column="62" selection-start-line="14" selection-start-column="62" selection-end-line="14" selection-end-column="62" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -634,8 +636,8 @@
     <entry file="file://$PROJECT_DIR$/kafka/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="680">
-            <caret line="34" column="43" selection-start-line="34" selection-start-column="43" selection-end-line="34" selection-end-column="43" />
+          <first_editor relative-caret-position="280">
+            <caret line="14" column="62" selection-start-line="14" selection-start-column="62" selection-end-line="14" selection-end-column="62" />
             <folding />
           </first_editor>
           <second_editor />

@@ -9,9 +9,9 @@ pip install -r requirements.txt
 根据实根环境配置config中的文件
 
 ## 依赖的API说明
-googlefinance   https://pypi.python.org/pypi/googlefinance
-confluent-kafka https://github.com/confluentinc/confluent-kafka-python
-schedule        https://pypi.python.org/pypi/schedule
+googlefinance   https://pypi.python.org/pypi/googlefinance<br/>
+confluent-kafka https://github.com/confluentinc/confluent-kafka-python<br/>
+schedule        https://pypi.python.org/pypi/schedule<br/>
 APScheduler     https://pypi.python.org/pypi/APScheduler/3.2.0
 
 ## test-data-producer.py

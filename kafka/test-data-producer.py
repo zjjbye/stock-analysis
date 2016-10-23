@@ -33,9 +33,9 @@ def generate_and_write_data(p, topic):
         # p.poll(0)
         p.send(topic=topic, value=payload, timestamp_ms=current_time)
         # - generate one log for every 100000 records
-        if num_of_msg == 100000:
+        if num_of_msg == 10:
             end = time.time()
-            logger.info('Wrote 1000000 records to Kafka in %s' % (end - start))
+            logger.info('Wrote 10 records to Kafka in %s' % (end - start))
             start = end
             num_of_msg = 0
         time.sleep(1)
@@ -59,15 +59,15 @@ if __name__ == '__main__':
     # - setup command line arguments
     parser = argparse.ArgumentParser()
     parser.add_argument('topic_name', help='the kafka topic push to')
-    parser.add_argument('kafka_broker', help='the location of the kafka broker')
+    parser.add_argument('kafka_brokers', help='the location of the kafka broker')
 
     # - parse arguments
     args = parser.parse_args()
     topic_name = args.topic_name
-    kafka_broker = args.kafka_broker
+    kafka_brokers = args.kafka_brokers
 
     # - instantiate a simple kafka producer
-    producer = KafkaProducer(bootstrap_servers=kafka_broker)
+    producer = KafkaProducer(bootstrap_servers=kafka_brokers)
 
     # - setup proper shutdown hook
     atexit.register(shutdown_hook, producer)

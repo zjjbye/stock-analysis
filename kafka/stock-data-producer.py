@@ -12,7 +12,7 @@ from kafka.errors import KafkaError, KafkaTimeoutError
 
 app = Flask(__name__)
 app.config.from_envvar('ENV_CONFIG_FILE')
-kafka_broker = app.config['CONFIG_KAFKA_ENDPOINT']
+kafka_brokers = app.config['CONFIG_KAFKA_ENDPOINTS']
 topic_name = app.config['CONFIG_KAFKA_TOPIC']
 
 logger_format = '%(asctime)-15s %(message)s'
@@ -23,12 +23,12 @@ if app.config['DEBUG']:
 else:
     logger.setLevel(logging.INFO)
 
-logger.debug('CONFIG_KAFKA_ENDPOINT = %s', kafka_broker)
+logger.debug('CONFIG_KAFKA_ENDPOINTS = %s', kafka_brokers)
 logger.debug('CONFIG_KAFKA_TOPIC = %s', topic_name)
 
 # - instantiate a simple kafka producer
 producer = KafkaProducer(
-    bootstrap_servers=kafka_broker
+    bootstrap_servers=kafka_brokers.split(',')
 )
 
 # - a set of symbols of stocks
@@ -109,9 +109,9 @@ def del_stock(symbol):
     return jsonify(list(symbols)), 200
 
 
-@app.route('/')
-def hello_world():
-    return 'Hello World!++++'
+# @app.route('/')
+# def hello_world():
+#    return 'Hello World!'
 
 
 if __name__ == '__main__':

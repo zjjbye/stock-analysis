@@ -1,0 +1,20 @@
+在.tf文件所在目录下，执行以下命令
+terraform plan
+terraform apply
+terraform destroy       # 会将所有资源清理掉（如，会把aws上的instance给terminate，会把相关的卷给删了）
+
+
+
+关于
+  connection {
+    user = "ubuntu"
+    private_key = "${var.key_path}"
+  }
+里面的用户名：
+正确的用户名如下所示：
+对于 Amazon Linux AMI，用户名称是 ec2-user。
+对于 RHEL5 AMI，用户名称为 root 或 ec2-user。
+对于 Ubuntu AMI，用户名称是 ubuntu。
+对于 Fedora AMI，用户名称为 fedora 或 ec2-user。
+对于 SUSE Linux，用户名称是 root 或 ec2-user。
+另外，如果 ec2-user 和 root 无法使用，请与 AMI 供应商核实。

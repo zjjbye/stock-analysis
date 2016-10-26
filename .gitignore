@@ -1,2 +1,3 @@
-cred
-terraform/basic
+cred/credentials.csv
+cred/stock.pem
+terraform/basic/

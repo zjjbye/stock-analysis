@@ -1,0 +1,7 @@
+需要修改文件的权限：
+chmod 400 *.pem
+
+*.pem和credentials.csv这两个文件的由来：
+	*.pem 来自 EC2（服务） -> KeyPairs
+	credentials.csv 来自 IAM（服务）
+这两个文件不能外泄

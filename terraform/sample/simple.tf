@@ -5,12 +5,12 @@ provider "aws" {
 }
 
 resource "aws_instance" "web" {
-  ami = "ami-21d30f42"        # image
+  ami = "ami-21d30f42"          # image
   instance_type = "t2.micro"
 
   connection {
-    user = "ubuntu"           # ssh -i stock.pem ubuntu@
-    private_key = "${var.key_path}"
+    user = "ubuntu"             # ssh -i stock.pem ubuntu@54.254.241.192
+    private_key = "${file("${var.key_path}")}"
   }
 
   key_name = "${var.key_name}"
@@ -48,9 +48,7 @@ resource "aws_security_group" "webaccess" {
   egress {
     from_port = 0
     to_port = 0
-    protocol = "-1"       # all
+    protocol = "-1"             # all
     cidr_blocks = ["0.0.0.0/0"]
   }
 }
-
-

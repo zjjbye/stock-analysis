@@ -9,7 +9,7 @@ resource "aws_instance" "web" {
   instance_type = "t2.micro"
 
   connection {
-    user = "ubuntu"             # ssh -i stock.pem ubuntu@54.254.241.192
+    user = "ubuntu"             # ssh -i *.pem ubuntu@54.254.241.192
     private_key = "${file("${var.key_path}")}"
   }
 

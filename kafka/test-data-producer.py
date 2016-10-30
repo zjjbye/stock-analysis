@@ -28,7 +28,7 @@ def generate_and_write_data(p, topic):
         price = random.randint(30, 120)
         current_time = time.time()
         timestamp = datetime.datetime.fromtimestamp(current_time).strftime('%Y-%m-%dT%H:%MZ')
-        payload = ('[{"StockSymbol":"AAPL","LastTradePrice":%d,"LastTradeDateTime:"%s"}]' % (price, timestamp)).encode('utf-8')
+        payload = ('[{"StockSymbol":"AAPL","LastTradePrice":%d,"LastTradeDateTime":"%s"}]' % (price, timestamp)).encode('utf-8')
         # p.produce(topic, value=payload)
         # p.poll(0)
         p.send(topic=topic, value=payload, timestamp_ms=current_time)

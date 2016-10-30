@@ -1,0 +1,28 @@
+1.
+进行本地测试时，可以将spark-streaming-kafka-0-8-assembly_2.11-2.0.0.jar添加到本地的“%SPARK_HOME%/jars/”(仅spark 2.0以后)目录下，
+这样就可以
+	直接在ide中执行
+	或直接在命令行中执行：stream-process.py 192.168.99.100:9092 stock-analyzer average-stock-price （不需使用spark-submit）
+2.
+windows本地测试命令：
+%SPARK_HOME%/bin/spark-submit.cmd --jars spark/spark-streaming-kafka-assembly_2.10-1.5.2.jar spark/stream-process.py 192.168.99.100:9092 stock-analyzer average-stock-price
+
+3.
+安装pyspark依赖：
+I.下载spark和对应版本的hadoop已编译包
+II.配置环境变量SPARK_HOME和HADOOP_HOME
+III.将spark目录下的pyspark文件夹（如 D:\spark-1.2.0-bin-hadoop2.4\python\pyspark）
+	复制到python安装目录\Lib\site-packages（如 C:\Python27\Lib\site-packages）里
+IV.安装py4包：pip install py4j==x.x.x   注意版本，可能得多试几个版本才能找到pyspark所需要的那个版本
+
+4.
+使用spark streaming时，需要spark-streaming-kafka-assembly包：
+spark 1.5.2 可用：spark-streaming-kafka-assembly_2.10-1.5.2.jar
+spark 2.0.0 可用：spark-streaming-kafka-0-8-assembly_2.11-2.0.0.jar
+
+5.
+关于版本对应问题：
+I.spark-streaming-kafka-assembly包的版本应于spark版本一致
+II.pyspark的版本也应与spark版本一致，即：
+	本地测试时，pyspark版本应与环境变量 %SPARK_HOME% 对应的spark版本一致
+	spark-client模式运行时，pyspark版本应与spark集群的版本一致

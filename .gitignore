@@ -1,3 +1,5 @@
 cred/credentials.csv
 cred/stock.pem
 terraform/basic/
+spark/spark-streaming-kafka-0-8-assembly_2.11-2.0.0.jar
+spark/spark-streaming-kafka-assembly_2.10-1.5.2.jar

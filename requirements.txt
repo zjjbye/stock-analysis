@@ -1,3 +1,4 @@
+pyspark
 cassandra
 googlefinance
 apscheduler

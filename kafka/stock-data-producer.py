@@ -91,7 +91,7 @@ def add_stock(symbol):
         pass
     else:
         symbols.add(symbol)
-        schedule.add_job(fetch_price, 'interval', [symbol], seconds=1, id=symbol)
+        schedule.add_job(fetch_price, 'interval', [symbol.encode('utf-8')], seconds=1, id=symbol)
     return jsonify(list(symbols)), 200
 
 

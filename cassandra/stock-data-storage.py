@@ -118,5 +118,5 @@ if __name__ == '__main__':
     atexit.register(shutdown_hook, consumer, session)
 
     for msg in consumer:
-        print(msg)
+        logger.debug(msg)
         persist_data(msg.value, session, data_table)

@@ -67,7 +67,7 @@ if __name__ == '__main__':
     kafka_brokers = args.kafka_brokers
 
     # - instantiate a simple kafka producer
-    producer = KafkaProducer(bootstrap_servers=kafka_brokers)
+    producer = KafkaProducer(bootstrap_servers=kafka_brokers.split(','))
 
     # - setup proper shutdown hook
     atexit.register(shutdown_hook, producer)

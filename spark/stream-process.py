@@ -85,7 +85,7 @@ if __name__ == '__main__':
     kafka_stream.foreachRDD(process)
 
     # - instantiate a simple kafka producer
-    kafka_producer = KafkaProducer(bootstrap_servers=kafka_brokers)
+    kafka_producer = KafkaProducer(bootstrap_servers=kafka_brokers.split(','))
 
     # - setup proper shutdown hook
     atexit.register(shutdown_hook, kafka_producer)

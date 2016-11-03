@@ -70,11 +70,9 @@ if __name__ == '__main__':
     new_topic = args.new_topic
 
     # - setup spark streaming utility
-
     conf = SparkConf() \
         .setMaster("local[2]") \
         .setAppName("StockAveragePrice")
-
     sc = SparkContext(conf=conf)
     sc.addFile('spark/stream-process.py')
     sc.setLogLevel('ERROR')

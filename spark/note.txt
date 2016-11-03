@@ -26,3 +26,17 @@ I.spark-streaming-kafka-assembly包的版本应于spark版本一致
 II.pyspark的版本也应与spark版本一致，即：
 	本地测试时，pyspark版本应与环境变量 %SPARK_HOME% 对应的spark版本一致
 	spark-client模式运行时，pyspark版本应与spark集群的版本一致
+
+
+
+If it prints such error:
+ImportError: No module named py4j.java_gateway
+Please add $SPARK_HOME/python/build to PYTHONPATH:
+export SPARK_HOME=/Users/pzhang/apps/spark-1.1.0-bin-hadoop2.4
+export PYTHONPATH=$SPARK_HOME/python:$SPARK_HOME/python/build:$PYTHONPATH
+add the following export PYTHONPATH=$SPARK_HOME/python/lib/py4j-0.8.2.1-src.zip:$PYTH‌​ONPATH
+
+export SPARK_HOME=/usr/local/Cellar/apache-spark/1.5.1
+export PYTHONPATH=$SPARK_HOME/libexec/python:$SPARK_HOME/libexec/python/build:$PYTHONPATH
+PYTHONPATH=$SPARK_HOME/python/lib/py4j-0.8.2.1-src.zip:$PYTHONPATH
+export PYTHONPATH=$SPARK_HOME/python:$SPARK_HOME/python/build:$PYTHONPATH

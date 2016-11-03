@@ -13,9 +13,10 @@ logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)
 
 
-def generate_and_write_data(p, topic):
+def generate_and_write_data(p, topic, symbols):
     """
     generate data and write it to kafka
+    :param symbols:
     :param p: produce
     :param topic:
     :return:
@@ -24,21 +25,23 @@ def generate_and_write_data(p, topic):
     num_of_msg = 0
     start = time.time()
     while True:
-        num_of_msg += 1
-        price = random.randint(30, 120)
-        current_time = time.time()
-        timestamp = datetime.datetime.fromtimestamp(current_time).strftime('%Y-%m-%dT%H:%MZ')
-        payload = ('[{"StockSymbol":"AAPL","LastTradePrice":%d,"LastTradeDateTime":"%s"}]' % (price, timestamp)).encode('utf-8')
-        # p.produce(topic, value=payload)
-        # p.poll(0)
-        p.send(topic=topic, value=payload, timestamp_ms=current_time)
-        # - generate one log for every 100000 records
-        if num_of_msg == 10:
-            end = time.time()
-            logger.info('Wrote 10 records to Kafka in %s' % (end - start))
-            start = end
-            num_of_msg = 0
-        time.sleep(1)
+        for symbol in symbols:
+            num_of_msg += 1
+            price = random.randint(30, 120)
+            current_time = time.time()
+            timestamp = datetime.datetime.fromtimestamp(current_time).strftime('%Y-%m-%dT%H:%MZ')
+            payload = ('[{"StockSymbol":"%s","LastTradePrice":%d,"LastTradeDateTime":"%s"}]'
+                       % (symbol, price, timestamp)).encode('utf-8')
+            # p.produce(topic, value=payload)
+            # p.poll(0)
+            p.send(topic=topic, value=payload, timestamp_ms=current_time)
+            # - generate one log for every 5 records
+            if num_of_msg == 10:
+                end = time.time()
+                logger.info('Wrote 10 records to Kafka in %s' % (end - start))
+                start = end
+                num_of_msg = 0
+            time.sleep(0.5)
 
 
 def shutdown_hook(p):
@@ -73,4 +76,4 @@ if __name__ == '__main__':
     atexit.register(shutdown_hook, producer)
 
     # - start to write kafka
-    generate_and_write_data(producer, topic_name)
+    generate_and_write_data(producer, topic_name, ["AAPL", "ADSK"])

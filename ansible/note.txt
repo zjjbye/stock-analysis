@@ -1,0 +1,55 @@
+ansible需安装在Linux上
+
+在Centos 6.*上安装Python2.7.10：
+1.
+yum install openssl-devel
+2.
+wget http://www.python.org/ftp/python/2.7.10/Python-2.7.10.tgz
+tar -xvf Python-2.7.10.tar
+mkdir /usr/local/python2.7.10
+cd Python-2.7.10 #进入解压后的Python目录
+./configure --prefix=/usr/local/python2.7  #等待编译完成
+make && make install #等待安装
+mv /usr/bin/python /usr/bin/python2.6 #将原版本的python更换一个名字
+ln -s /usr/local/python2.7 /usr/bin/python 或 vim ~/.bashrc &&& export PATH="/usr/local/python2.7.10/bin:$PATH"
+python --version
+3.
+wget --no-check-certificate https://bootstrap.pypa.io/ez_setup.py
+python ez_setup.py --insecure
+4.
+wget "https://pypi.python.org/packages/source/p/pip/pip-1.5.4.tar.gz#md5=834b2904f92d46aaa333267fb1c922bb" --no-check-certificate
+tar -xzvf pip-1.5.4.tar.gz
+cd pip-1.5.4
+python setup.py install
+5.(修改yum)
+如果不做这一步，yum将报错
+vim /usr/bin/yum
+将 #!/usr/bin/python 改成 #!/usr/bin/python2.6
+
+
+pip install markupsaf
+
+安装ansible：
+1.
+pip install ansible
+2.
+rpm -ivh http://mirrors.sohu.com/fedora-epel/6/x86_64/epel-release-6-8.noarch.rpm
+yum install ansible
+3.
+参见README.md
+
+
+安装依赖：
+1.
+ansible-galaxy install AnsibleShipyard.ansible-zookeeper
+如果出现[ERROR]: failed to download the file: Failed to validate the SSL certificate for github.com:443.....
+请先执行：update-ca-trust，然后再重试。
+2.
+pip install boto
+pip install six
+
+---------------------------
+获取了AWS access key和access key secret以后, 更改~/.aws/credentials文件如下:
+[default]
+aws_access_key_id = [你的 access key id]  (不需要方括号[]，下同)
+aws_secret_access_key = [你的 access key secret]

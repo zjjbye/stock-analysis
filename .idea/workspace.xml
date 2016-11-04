@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="107cab34-9be0-4314-a894-f46a4b448408" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ansible/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ansible/note.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/terraform/zookeeper-copy/output.tf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/terraform/zookeeper-copy/variables.tf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/terraform/zookeeper-copy/zookeeper.tf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/terraform/zookeeper/variables.tf" afterPath="$PROJECT_DIR$/terraform/zookeeper/variables.tf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spark/stream-process2.py" afterPath="$PROJECT_DIR$/spark/stream-process2.py" />
     </list>
     <ignored path="stock-analysis.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -29,21 +23,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="5" column="19" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="zookeeper.tf" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/terraform/zookeeper-copy/zookeeper.tf">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="480">
+              <caret line="24" column="14" selection-start-line="24" selection-start-column="14" selection-end-line="24" selection-end-column="14" />
               <folding>
                 <marker date="1478242794233" expanded="true" signature="33:54" ph="${...}" />
                 <marker date="1478242794233" expanded="true" signature="72:93" ph="${...}" />
@@ -58,11 +42,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="variables.tf" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/terraform/zookeeper/variables.tf">
+      <file leaf-file-name="stream-process2.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/spark/stream-process2.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="280">
-              <caret line="41" column="36" selection-start-line="41" selection-start-column="36" selection-end-line="41" selection-end-column="36" />
+            <state relative-caret-position="284">
+              <caret line="53" column="29" selection-start-line="53" selection-start-column="29" selection-end-line="53" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -107,7 +91,6 @@
         <option value="$PROJECT_DIR$/cassandra/stock-data-storage.py" />
         <option value="$PROJECT_DIR$/spark/note.txt" />
         <option value="$PROJECT_DIR$/kafka/test-data-producer.py" />
-        <option value="$PROJECT_DIR$/spark/stream-process2.py" />
         <option value="$PROJECT_DIR$/spark/stream-process.py" />
         <option value="$PROJECT_DIR$/ansible/zookeeper.yml" />
         <option value="$PROJECT_DIR$/terraform/zookeeper/output.tf" />
@@ -117,6 +100,7 @@
         <option value="$PROJECT_DIR$/ansible/README.md" />
         <option value="$PROJECT_DIR$/terraform/zookeeper-copy/variables.tf" />
         <option value="$PROJECT_DIR$/terraform/zookeeper/variables.tf" />
+        <option value="$PROJECT_DIR$/spark/stream-process2.py" />
       </list>
     </option>
   </component>
@@ -231,11 +215,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="terraform" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="zookeeper" />
+              <option name="myItemId" value="spark" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -901,13 +881,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spark/stream-process2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="444">
-          <caret line="61" column="0" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/terraform/basic/variables.tf">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="160">
@@ -1037,23 +1010,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/terraform/zookeeper-copy/zookeeper.tf">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1478242794233" expanded="true" signature="33:54" ph="${...}" />
-            <marker date="1478242794233" expanded="true" signature="72:93" ph="${...}" />
-            <marker date="1478242794233" expanded="true" signature="107:124" ph="${...}" />
-            <marker date="1478242794233" expanded="true" signature="178:200" ph="${...}" />
-            <marker date="1478242794233" expanded="true" signature="211:260" ph="${...}" />
-            <marker date="1478242794233" expanded="true" signature="219:259" ph="(...)" />
-            <marker date="1478242794233" expanded="true" signature="281:301" ph="${...}" />
-            <marker date="1478242794233" expanded="true" signature="317:332" ph="${...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/terraform/zookeeper-copy/variables.tf">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1060">
@@ -1098,6 +1054,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/terraform/zookeeper/variables.tf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="326">
+          <caret line="41" column="36" selection-start-line="41" selection-start-column="36" selection-end-line="41" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="100">
@@ -1106,10 +1070,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/terraform/zookeeper/variables.tf">
+    <entry file="file://$PROJECT_DIR$/terraform/zookeeper-copy/zookeeper.tf">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="41" column="36" selection-start-line="41" selection-start-column="36" selection-end-line="41" selection-end-column="36" />
+        <state relative-caret-position="480">
+          <caret line="24" column="14" selection-start-line="24" selection-start-column="14" selection-end-line="24" selection-end-column="14" />
+          <folding>
+            <marker date="1478242794233" expanded="true" signature="33:54" ph="${...}" />
+            <marker date="1478242794233" expanded="true" signature="72:93" ph="${...}" />
+            <marker date="1478242794233" expanded="true" signature="107:124" ph="${...}" />
+            <marker date="1478242794233" expanded="true" signature="178:200" ph="${...}" />
+            <marker date="1478242794233" expanded="true" signature="211:260" ph="${...}" />
+            <marker date="1478242794233" expanded="true" signature="219:259" ph="(...)" />
+            <marker date="1478242794233" expanded="true" signature="281:301" ph="${...}" />
+            <marker date="1478242794233" expanded="true" signature="317:332" ph="${...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spark/stream-process2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="284">
+          <caret line="53" column="29" selection-start-line="53" selection-start-column="29" selection-end-line="53" selection-end-column="29" />
           <folding />
         </state>
       </provider>

@@ -51,7 +51,7 @@ def streaming_process(dstream):
                 kafka_producer.send(new_topic, value=data)
             except KafkaError as error:
                 logger.warn('Failed to send average stock price to kafka, caused by: %s', error.message)
-            logger.info('Send %s to kafka' % json.loads(data))
+            logger.info('Sent %s to kafka' % json.loads(data))
 
     dstream \
         .map(record2pair) \

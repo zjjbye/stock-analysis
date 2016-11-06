@@ -5,7 +5,7 @@
 	或直接在命令行中执行：stream-process.py 192.168.99.100:9092 stock-analyzer average-stock-price （不需使用spark-submit）
 2.
 windows本地测试命令：
-%SPARK_HOME%/bin/spark-submit.cmd --jars spark/spark-streaming-kafka-assembly_2.10-1.5.2.jar spark/stream-process.py 192.168.99.100:9092 stock-analyzer average-stock-price
+%SPARK_HOME%/bin/spark-submit.cmd --jars spark/spark-streaming-kafka-assembly_2.10-1.5.2.jar spark/stream-process2.py 192.168.99.100:9092 stock-analyzer average-stock-price
 
 3.
 安装pyspark依赖：
